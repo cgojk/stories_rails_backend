@@ -1,6 +1,3 @@
-
-
-
 require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
@@ -31,6 +28,8 @@ app.use(cors({
 app.use(fileUpload({
   limits: { fileSize: 50 * 1024 * 1024 }
 }))
+
+console.log("MONGO_URI:", process.env.MONGO_URI);
 
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
