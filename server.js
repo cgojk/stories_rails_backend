@@ -29,7 +29,7 @@ app.use(fileUpload({
   limits: { fileSize: 50 * 1024 * 1024 }
 }))
 
-console.log("All environment variables:", Object.keys(process.env));
+
 console.log("MONGO_URI:", process.env.MONGO_URI);
 
 mongoose.connect(process.env.MONGO_URI, {
